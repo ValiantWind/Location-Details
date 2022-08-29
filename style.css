@@ -20,6 +20,7 @@
     align-items: center;
     flex-direction: column;
     background: rgba(18, 18, 18, 1);
+    font-family: 'Gotham Screen Smart', sans-serif;
 }
 h1{
     color: white;
