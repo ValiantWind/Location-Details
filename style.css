@@ -28,6 +28,8 @@ h1{
     font-family: 'Gotham Screen Smart', sans-serif;
     font-size: 24px;
     font-style: normal;
+		align-items: center;
+		align-content: center;
     font-weight: 500;
     line-height: 140%;
 }
@@ -36,6 +38,8 @@ h3{
     margin: 15px;
     font-family: 'Gotham Screen Smart', sans-serif;
     font-style: normal;
+		align-items: center;
+		align-content: center;
     font-weight: 500;
 }
 h4{
@@ -43,6 +47,8 @@ h4{
     margin: 15px;
     font-family: 'Gotham Screen Smart', sans-serif;
     font-style: normal;
+		align-items: center;
+		align-content: center;
     font-weight: 500;
     
 }
