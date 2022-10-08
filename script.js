@@ -10,7 +10,7 @@ let population = document.getElementById("countryPopulation");
 let currency = document.getElementById("countryCurrency");
 const refreshButton = document.getElementById("refresh");
 
-// Fetch the User's Location Details via the API used below
+// Fetch the User's Location Details via the API used below with a GET Request
  axios({
   method: 'get',
   url: 'https://ipapi.co/json/',
@@ -42,6 +42,7 @@ const refreshButton = document.getElementById("refresh");
 		timezone.innerHTML = `Timezone: ${data.timezone}`
   });
 
+// Reloads the page when the refesh button is clicked
 function refresh(){
 	window.location.reload();
 }
