@@ -8,6 +8,7 @@ let postal = document.getElementById("postal");
 let timezone = document.getElementById("timezone");
 let population = document.getElementById("countryPopulation");
 let currency = document.getElementById("countryCurrency");
+const refreshButton = document.getElementById("refresh");
 
 // Fetch the User's Location Details via the API used below
  axios({
@@ -40,3 +41,7 @@ let currency = document.getElementById("countryCurrency");
 		
 		timezone.innerHTML = `Timezone: ${data.timezone}`
   });
+
+function refresh(){
+	window.location.reload();
+}
