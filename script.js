@@ -1,12 +1,15 @@
-var ip = document.getElementById("ip");
+// Defining each element in index.html as a variable
+let ip = document.getElementById("ip");
 let city = document.getElementById("city");
 let state = document.getElementById("state");
-var country = document.getElementById("country");
-var capital = document.getElementById("countryCapital");
+let country = document.getElementById("country");
+let capital = document.getElementById("countryCapital");
 let postal = document.getElementById("postal");
-var timezone = document.getElementById("timezone");
-var population = document.getElementById("countryPopulation");
-var currency = document.getElementById("countryCurrency")
+let timezone = document.getElementById("timezone");
+let population = document.getElementById("countryPopulation");
+let currency = document.getElementById("countryCurrency");
+
+// Fetch the User's Location Details via the API used below
  axios({
   method: 'get',
   url: 'https://ipapi.co/json/',
@@ -15,16 +18,13 @@ var currency = document.getElementById("countryCurrency")
   .then(function (response) {
     console.log(response)
 		var data = response.data;
+		// Sometimes the city won't exist, so if shows as null or undefined, we'll replace it with "N/A"
 		if(!data.city || data.city == null || data.city == "undefined"){
 			city.innerHTML = "City: N/A";
 		} else {
 			city.innerHTML = `City: ${data.city}`
 		};
-		// if(!data.state || data.state == null || data.state == "undefined"){
-		// 	state.innerText = "State: N/A"
-		// } else {
-		// 	state.innerText = `State: ${data.region} (${data.region_code})`;
-		// };
+		// Same thing as above except for the Postal Code
 		if(!data.postal || data.postal == null || data.postal == "undefined"){
 			postal.innerHTML == "Postal Code: N/A"
 
@@ -39,5 +39,4 @@ var currency = document.getElementById("countryCurrency")
 		currency.innerHTML = `Country Currency: ${data.currency_name} (${data.currency})`
 		
 		timezone.innerHTML = `Timezone: ${data.timezone}`
-		
   });
