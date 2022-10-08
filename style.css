@@ -1,7 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+/* A Recreation of the style Roblox uses for create.roblox.com */
+
 @font-face {
     font-family: 'Gotham Screen Smart';
     src: local('Gotham Screen Smart Book'), local('Gotham-Screen-Smart-Book'),
@@ -11,6 +9,12 @@
     font-weight: normal;
     font-style: normal;
   }
+
+*{
+  margin: 0;
+  padding: 0;
+	background: rgba(18, 18, 18, 1);
+}
 
 .main{
     width: 100%;
@@ -22,6 +26,7 @@
     background: rgba(18, 18, 18, 1);
     font-family: 'Gotham Screen Smart', sans-serif;
 }
+
 h1{
     color: white;
     margin: 15px;
@@ -32,6 +37,7 @@ h1{
     font-weight: 500;
     line-height: 140%;
 }
+
 h2{
     color: white;
     margin: 15px;
@@ -42,6 +48,7 @@ h2{
     font-weight: 500;
     line-height: 140%;
 }
+
 h3{
     color: white;
     margin: 15px;
@@ -61,14 +68,7 @@ h4{
     font-weight: 500;
     
 }
-b{
-    color: white;
-    margin: 15px;
-    font-family: 'Gotham Screen Smart', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16;
-}
+
 input{
     width: 300px;
     height: 40px;
@@ -81,25 +81,7 @@ input{
     padding: 0 10px;
     font-family: 'Gotham Screen Smart', sans-serif;
 }
-button{
-	margin: 10px;
-  border: none;
-  cursor: pointer;
-  color: #171717;
-  background-color: #2BB1FF;
-  padding: 6px 16px;
-  font-size: 16px;
-  min-width: 64px;
-  box-sizing: border-box;
-  font-style: normal;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  font-family: 'Gotham Screen Smart', Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-  font-weight: 500;
-  line-height: 24px;
-  font-display: swap;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
+
 p{
   border: none;
   cursor: pointer;
@@ -117,29 +99,10 @@ p{
   border-radius: 4px;
 }
 
-button:hover{
-  text-decoration: none;
-  background-color: rgba(43, 177, 255, 0.8);
-}
-
 select{
   font-family: 'Gotham Screen Smart', sans-serif;
   background: transparent;
   background-color: #171717;
   color: white;
   border: none;
-}
-
-label{
-     color: white;
-    margin: 15px;
-    font-family: 'Gotham Screen Smart', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-}
-
-img{
-  margin: 15px;
 }

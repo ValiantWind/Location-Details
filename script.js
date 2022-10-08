@@ -8,7 +8,6 @@ let postal = document.getElementById("postal");
 let timezone = document.getElementById("timezone");
 let population = document.getElementById("countryPopulation");
 let currency = document.getElementById("countryCurrency");
-const refreshButton = document.getElementById("refresh");
 
 // Fetch the User's Location Details via the API used below with a GET Request
  axios({
@@ -18,20 +17,24 @@ const refreshButton = document.getElementById("refresh");
 })
   .then(function (response) {
     console.log(response)
+		// Data from the Get Request
 		var data = response.data;
+		
 		// Sometimes the city won't exist, so if shows as null or undefined, we'll replace it with "N/A"
 		if(!data.city || data.city == null || data.city == "undefined"){
 			city.innerHTML = "City: N/A";
 		} else {
 			city.innerHTML = `City: ${data.city}`
 		};
+		
 		// Same thing as above except for the Postal Code
 		if(!data.postal || data.postal == null || data.postal == "undefined"){
 			postal.innerHTML == "Postal Code: N/A"
-
 		} else {
 			postal.innerHTML = `Postal Code: ${data.postal}`
 		}
+
+		//Last but not least, apply all the details fetched from the API used above to the elements
     ip.innerHTML = `IP Address (IPv4): ${data.ip}`
 		state.innerText = `State: ${data.region || 'N/A'} (${data.region_code || ""})`
 		country.innerHTML = `Country: ${data.country_name} (${data.country_code_iso3 || ""})`

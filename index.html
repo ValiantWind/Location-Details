@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+	
   <head>
     <meta charset="UTF-8" />
+		<meta name="description" content="Your Location Details (NOT STORED)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="ValiantWind">
+		
+		<!-- Refresh the Page every 45 seconds -->
+		<meta http-equiv="refresh" content="45">
     <title>Location Details</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+	
   <body>
-    <div class="main">
+    <div class="main">		
       <h1>Your Location Details</h1>
-      <h3>I do not store any of your data.</h2>
-      <h3 align="center">Open-source: https://github.com/ValiantWind/Location-Details</h3>		
-			<h4 align="center">The details shown below is based on your IP Address. It might not be entirely accurate.</h4>
-			<!-- All of these are handled in script.js -->
+			<h3 align="center">Open-source: https://github.com/ValiantWind/Location-Details</h3>	
+      <h3 align="center">I do not store any of your data. See for your self in the files.</h3>	
+			<h4 align="center">The details shown below is based on your IP Address. It might not be entirely accurate. Refreshes every 45 seconds</h4>
+			
+			<br>
+			<br>
+		<!-- All of these are handled in script.js -->
     <h4 align="center" id="ip"></h4>
     <h4 align="center" id="city"></h4>
 		<h4 align="center" id="state"></h4>
     <h4 align="center" id="country"></h4>
 		<h4 align="center" id="countryCapital"></h4>
 		<h4 align="center" id="countryPopulation"></h4>
-     <h4 align="center" id="countryCurrency"></h4>
+    <h4 align="center" id="countryCurrency"></h4>
 		<h4 align="center" id="postal"></h4>
 		<h4 align="center" id="timezone"></h4>
-		<button type="submit" onclick="refresh()" id="refresh">
-    	Refresh
-    </button>
+			
+			<br>
+			<br>
+			
+			<h3 align="center">Registered Under the Mozilla Public License 2.0</h3>
+			<p align="center">If you want anything to be added, DM on Discord at ValiantWind#6453</p>
     </div>
+		
+		<!-- Used in script.js to make an Axios GET Request from a certain API fetch the location details of the user-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+		<!-- Obviously needed for this to work at all -->
 		<script src="script.js"></script>
+		
   </body>
 </html>
