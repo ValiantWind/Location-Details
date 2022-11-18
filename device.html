@@ -3,7 +3,7 @@
 	
   <head>
     <meta charset="UTF-8" />
-		<meta name="description" content="Your Location Details (NOT STORED)">
+		<meta name="description" content="Your Device Details (NOT STORED)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="keywords" content="HTML, CSS, JavaScript">
 		<meta name="author" content="ValiantWind">
@@ -16,15 +16,15 @@
 	
   <body>
     <div class="main">		
-      <h1>Your Location Details</h1>
+      <h1>Your Device Details</h1>
 			<h3 align="center">Open-source: https://github.com/ValiantWind/Location-Details</h3>	
       <h3 align="center">I do not store any of your data. See for your self in the files.</h3>	
-			<h4 align="center">The details shown below is based on your IP Address. It might not be entirely accurate. Refreshes every 45 seconds</h4>
+			<h4 align="center">The Details below are not guaranteed to be accurate.</h4>
 			
 			<br>
 			<br>
 		
-    <h4 align="center" id="ip"></h4>
+    <h4 align="center" id="NetworkType"></h4>
     <h4 align="center" id="city"></h4>
 		<h4 align="center" id="state"></h4>
     <h4 align="center" id="country"></h4>
@@ -37,14 +37,16 @@
 			<br>
 			<br>
 
-			<button align="center" type="button" id="deviceDetails">
-			View Your Device Details
+			<button align="center" type="button" id="locationDetails" onclick="window.history.back()">
+			View Your Location Details
 		</button>
+			
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 		<!-- Obviously needed for this to work at all -->
-		<script src="js/location.js"></script>
+		<script src="js/device.js"></script>
 		<script src="js/handler.js"></script>
+		
   </body>
 </html>
