@@ -9,6 +9,19 @@ let timezone = document.getElementById("timezone");
 let population = document.getElementById("countryPopulation");
 let currency = document.getElementById("countryCurrency");
 
+async function revealIpAddress() {
+	if (document.getElementById("showIpAddress")) {
+		const revealIpAddress = document.getElementById("showIpAddress");
+		revealIpAddress.parentNode.removeChild(revealIpAddress);
+		await axios.get(`https://api.valiantwind.dev/v1/get-ip-address`).then((response) => {
+			document.getElementById("ip").innerHTML = "IP Address (IPv4): " + response.data
+		}).catch((error) => {
+			console.log(error)
+			document.getElementById("ip").innerHTML = "IP Address: Could not fetch IP Address"
+		})
+	}
+}
+
 // Fetch the User's Location Details via the API used below with a GET Request
  axios({
   method: 'get',
@@ -35,7 +48,6 @@ let currency = document.getElementById("countryCurrency");
 		}
 
 		//Last but not least, apply all the details fetched from the API used above to the elements
-    ip.innerHTML = `IP Address (IPv4): ${data.ip}`
 		state.innerText = `State: ${data.region || 'N/A'} (${data.region_code || ""})`
 		country.innerHTML = `Country: ${data.country_name} (${data.country_code_iso3 || ""})`
 		capital.innerHTML = `Country Capital: ${data.country_capital}`

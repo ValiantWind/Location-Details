@@ -30,7 +30,7 @@ for (const button of buttons) {
 
 if (deviceDetailsButton) {
 	deviceDetailsButton.addEventListener("click", function (event) {
-		window.location.href = "/device.html"
+		window.location.href = "https://ValiantWind.github.io/device-details"
 	});	
 }
 
